@@ -8,7 +8,7 @@ Adresse Mac . . . . . . . . : 84-C5-A6-76-62-B8
 
 ☀️ Affichez votre table ARP
 
-```
+```ps
 interface: 192.168.56.1 --- 0x4
   인터넷 주소           Physical Address           유형
   192.168.56.255        ff-ff-ff-ff-ff-ff     Static
@@ -44,16 +44,16 @@ interface: 10.33.77.61 --- 0xc
 ```
 ☀️ Déterminez l'adresse MAC de la passerelle du réseau de l'école
 
-```
+```ps
  10.33.79.254          7c-5a-1c-d3-d8-76     Dynamic
 ```
 
 ☀️ Supprimez la ligne qui concerne la passerelle
 
-```
+```ps
 PS C:\WINDOWS\system32> arp -d 10.33.79.254
 ```
-```
+```ps
 interface: 10.33.77.61 --- 0xc
   Internet Address     Physical Address        Type
   10.33.79.254          7c-5a-1c-d3-d8-76     Dynamic
@@ -66,7 +66,7 @@ interface: 10.33.77.61 --- 0xc
 ```
 ☀️ Prouvez que vous avez supprimé la ligne dans la table ARP
 
-```
+```ps
 Interface: 192.168.56.1 --- 0x4
   Internet Address     Physical Address        Type
   192.168.56.255        ff-ff-ff-ff-ff-ff     Static
@@ -103,7 +103,7 @@ Interface: 169.254.12.239 --- 0x17
 ## II. ARP dans un réseau local
 
 ☀️ Déterminer
-```
+```ps
 Wireless LAN adapter Wi-Fi:
 
    Connection-specific DNS Suffix  . :
@@ -132,18 +132,18 @@ Ip reseau local
 ```
 ☀️ DIY
 ```
-```
+```ps
 changer d'adresse IP
 celui d'avant
 IPv4 Address  . . . . . . . . . .  : 192.168.80.127
 celui d'après
-IPv4 주소 . . . . . . . . . : 192.168.80.126(기본 설정)
+IPv4 주소 . . . . . . . . . : 192.168.80.126(default)
 ```
 ☀️ Pingz !
 
 vérifiez que vous pouvez tous vous ping avec ces adresses IP
 vérifiez avec une commande ping que vous avez bien un accès internet
-```
+```ps
 Site 
 Ping wkcd.com [13.248.169.48] with 32 bytes of data:
 13.248.169.48: bytes=32 time=113ms TTL=247
@@ -198,7 +198,7 @@ Ping 192.168.80.200 with 32 bytes of data:
 
 ☀️ Affichez votre table ARP !
 
-```
+```pc
 Interface: 192.168.80.126 --- 0xc
   Internet Address           물리적 주소           유형
   192.168.80.69         98-bd-80-8b-c9-fa     Dynamic
